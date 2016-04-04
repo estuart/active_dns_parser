@@ -25,7 +25,18 @@ Currently the Avro schema expected by the program is as follows:
 
 ### Dependencies
 
-Currently the only dependency is the Avro C library. The code and install instructions can be found [here] (https://github.com/apache/avro/tree/master/lang/c). For help understanding the API I have found [this page] (https://avro.apache.org/docs/current/api/c/) to be helpful.
+#### Lib Snappy
+The avro files are compressed with the Snappy codec so we will need this installed to correctly parse the Avro files. **This is required to be installed before the Avro C library is compiled** or else Snappy support will not be enabled for the Avro libary and the active dns avro files will be unparsable to the library.
+
+On Debian based distributions simply run the following command and you should be good to go.
+```shell
+sudo apt-get install lib-snappydev
+```
+
+####Avro C Library
+To run this program you will need to compile and link against the Avro C library. The code and install instructions can be found [here] (https://github.com/apache/avro/tree/master/lang/c). For help understanding the API I have found [this page] (https://avro.apache.org/docs/current/api/c/) to be helpful.
+
+
 
 ### Usage
 
