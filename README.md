@@ -30,7 +30,7 @@ The avro files are compressed with the Snappy codec so we will need this install
 
 On Debian based distributions simply run the following command and you should be good to go.
 ```shell
-sudo apt-get install lib-snappydev
+sudo apt-get install libsnappy-dev
 ```
 
 ####Avro C Library
